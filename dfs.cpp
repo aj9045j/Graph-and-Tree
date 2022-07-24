@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int n = 1e5 + 10;
-bool vis[n];
-vector <int> g[n];
+const int N = 1e5 + 10;
+bool vis[N];
+vector <int> g[N];
 void dfs(int vertex) {
-  cout << L vertex << endl;
+  cout <<  vertex << endl;
   vis[vertex] = true;
   for (int child : g[vertex]) {
     cout << vertex << ":" << child << endl;
@@ -13,11 +13,12 @@ void dfs(int vertex) {
     dfs(child);
   }
 }
+//n=nodes,e=edges
 int main() {
-  int n, m;
+  int n, e;
 
-  cin >> n >> m;
-  for (int i = 0; i < 9; i++) {
+  cin >> n >> e;
+  for (int i = 0; i < e; i++) {
 
     int v1, v2;
     cin >> v1 >> v2;

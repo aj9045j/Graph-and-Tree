@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int n = 1e5 + 10;
-vector<int> g[n];
-int vis[n];
-int lvl[n];
+const int N = 1e5 + 10;
+vector<int> g[N];
+int vis[N];
+int lvl[N];
 void bfs(int source) {
 	queue<int> q;
 	q.push(source);
@@ -24,10 +24,10 @@ void bfs(int source) {
 	}
 }
 int main() {
-	int n, m;
+	int n, e;
 
-	cin >> n >> m;
-	for (int i = 0; i < 9; i++) {
+	cin >> n >> e;
+	for (int i = 0; i < e; i++) {
 
 		int v1, v2;
 		cin >> v1 >> v2;
@@ -36,7 +36,8 @@ int main() {
 
 	}
 	bfs(1);
-	for (int i = 0; i < 9; ++i)
+	cout << "level of nodes\n";
+	for (int i = 1; i <= n; ++i)
 	{
 		cout << endl << i << ":" << lvl[i];
 	}
